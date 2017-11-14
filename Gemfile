@@ -38,6 +38,9 @@ gem 'thor', '0.19.1'
 #devise
 gem 'devise'
 
+#bootstrap
+gem 'bootstrap-sass'
+
 group :development do
   gem 'listen', '~> 3.0.5'
 end
