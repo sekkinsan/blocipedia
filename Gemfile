@@ -44,6 +44,9 @@ gem 'thor', '0.19.1'
 #devise
 gem 'devise'
 
+#figaro
+gem 'figaro', '1.0'
+
 #bootstrap
 gem 'bootstrap-sass'
 

@@ -14,7 +14,8 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require 'rspec/rails'
+require 'rails/all'
+require File.expand_path('../../config/environment', __FILE__)
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -24,7 +25,6 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::ControllerHelpers, type: :view
 
-end
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
