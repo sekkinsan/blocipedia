@@ -23,6 +23,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'shoulda'
 end
 
 # Use Puma as the app server
@@ -49,6 +51,9 @@ gem 'figaro', '1.0'
 
 #bootstrap
 gem 'bootstrap-sass'
+
+#bcrypt
+gem 'bcrypt'
 
 group :development do
   gem 'listen', '~> 3.0.5'

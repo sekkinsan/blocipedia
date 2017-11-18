@@ -13,7 +13,7 @@
   <body>
     <div class="container">
         <ul class="nav nav-tabs">
-          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Blocipedia", root_path %></li>
           <li><%= link_to "About", about_path %></li>
         <div class="user-info pull-right">
           <% if user_signed_in? %>
@@ -25,7 +25,20 @@
             <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %></li>
           <% end %>
         </div>
-      </ul>
+       </ul>
+        
+        <% if flash[:notice] %>
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:notice] %>
+          </div>
+        <% elsif flash[:alert] %>
+          <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
+
     <%= yield %>
     </div>
   </body>
