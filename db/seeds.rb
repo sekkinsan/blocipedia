@@ -16,6 +16,26 @@ require 'random_data'
     )
 end
 
+#create admin
+admin = User.create!(
+    email: 'admin@example.com',
+    password: 'password',
+    role: 'admin'
+)
+
+#create standard member
+member = User.create!(
+    email: 'member@example.com',
+    password: 'password'
+)
+
+#create premium member
+premium = User.create!(
+    email: 'premium@example.com',
+    password: 'password',
+    role: 'premium'
+)
+
 
 #create wikis
 10.times do
@@ -25,9 +45,18 @@ end
     )
 end
 
+user = User.first
+user.update_attributes!(
+    email: 'jacob.yun429@gmail.com',
+    password: 'password'
+)
 
+users = User.all
 wikis = Wiki.all
 
+
+
+puts "#{User.count} users created."
 puts "#{Wiki.count} wikis created."
 
 puts "Seed finished"
