@@ -62,6 +62,9 @@ gem 'pundit'
 #faker
 gem 'faker'
 
+#stripe
+gem 'stripe'
+
 group :development do
   gem 'listen', '~> 3.0.5'
 end
