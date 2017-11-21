@@ -35,6 +35,8 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+  config.include Devise::TestHelpers, type: :controller
+  config.include Warden::Test::Helpers
 
   FactoryGirl.factories.clear
   FactoryGirl.find_definitions
