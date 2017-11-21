@@ -59,6 +59,9 @@ gem 'bcrypt'
 #pundit
 gem 'pundit'
 
+#faker
+gem 'faker'
+
 group :development do
   gem 'listen', '~> 3.0.5'
 end

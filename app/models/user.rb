@@ -6,10 +6,10 @@ class User < ApplicationRecord
 
 
   has_many :wikis, dependent: :destroy
+  enum role: [:standard, :admin, :premium]
+  
 
   after_initialize { self.role ||= :standard }
-
-  enum role: [:standard, :admin, :premium]
 
 
 end

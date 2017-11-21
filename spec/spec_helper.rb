@@ -19,6 +19,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require_relative 'support/controller_helpers'
 require 'devise'
 require 'database_cleaner'
+require 'faker'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
