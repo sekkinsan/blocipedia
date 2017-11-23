@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :charges, only: [:new, :create]
 
+  match "users/:id/downgrade" => "users#downgrade", :as => "downgrade_user", via: [:get, :post]
+
   get 'about' => 'welcome#about'
 
   root 'welcome#index'

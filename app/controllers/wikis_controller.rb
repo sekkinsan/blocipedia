@@ -64,4 +64,5 @@ class WikisController < ApplicationController
       render :show
     end
   end
+
 end
