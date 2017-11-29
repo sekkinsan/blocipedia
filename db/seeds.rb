@@ -43,7 +43,9 @@ premium = User.create!(
 10.times do
     Wiki.create!(
         title: Faker::Lorem.word,
-        body: Faker::Lorem.paragraph
+        body: Faker::Lorem.paragraph,
+        private: false,
+        user: User.first
     )
 end
 
