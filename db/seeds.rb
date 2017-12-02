@@ -38,7 +38,6 @@ premium = User.create!(
     role: 'premium'
 )
 
-
 #create wikis
 10.times do
     Wiki.create!(
