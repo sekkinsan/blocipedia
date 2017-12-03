@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
 
   has_many :wikis, dependent: :destroy
+  has_many :collaborators, dependent: :destroy
   enum role: [:standard, :admin, :premium]
   
 

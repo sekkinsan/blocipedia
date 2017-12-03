@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
+  get 'collaborators/index'
+
+  get 'collaborators/show'
+
+  get 'collaborators/new'
+
+  get 'collaborators/edit'
+
   resources :wikis
+
+  resources :wikis do 
+    resources :collaborators, only: [:new, :create, :destroy]
+  end
 
   resources :users, only: [:new, :create]
 
