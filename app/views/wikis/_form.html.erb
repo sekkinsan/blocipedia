@@ -1,9 +1,9 @@
 <%= form_for @wiki do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control', placeholder: "Enter wiki title" %>
+  <%= f.text_field :title, class: 'form-control', placeholder: "Enter jiki title" %>
 
   <%= f.label :body %>
-  <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter wiki body" %>
+  <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter jiki body" %>
 
   <% if current_user.admin? || current_user.premium? %>
     <%= f.label :private, class: 'checkbox' do %>
